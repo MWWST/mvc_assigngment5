@@ -9,22 +9,26 @@
 </head>
 <body>
 	<div class="container">
-		<form action="courses/add" method="post">
-		Name:<input type="text" name="title">
-		Description:<input type="text" name="description">
-		<input type="submit" name="submit" value="SUBMIT!">
-		<input type="hidden" name="add_course" value="add_course">
-</form>	
+		<div class="row">
+			<div class="four columns offset-by-four columns">
+				<h4>Add a class</h4>
+				<form action="courses/add" method="post">
+				Name:<input type="text" name="title">
+				Description:<input type="text" name="description">
+				<input type="submit" name="submit" value="SUBMIT!">
+				<input type="hidden" name="add_course" value="add_course">
+				</form>	
+			</div>
+		</div>
 
 		<div class="row"> 
-			<div class="twelve columns">
+			<div class="ten columns offset-by-one column">
 				<table>
 					<thead>
 						<th>ID</th>
 						<th>Title</th>
 						<th>Description</th>
 						<th>Created at</th>
-						<th>Updated at</th>
 						<th>Delete</th>
 					</thead>		
 					<tr>
@@ -32,10 +36,10 @@
 							// var_dump($record); 
 							echo "<tr>";
 								foreach($record as $item =>$data) {
-									echo "<td>".$data."</td>";
+									echo "<td>".$data." ";
 						} 
 
-						echo"<td><a href='courses/delete/".$record['id']."'/>Delete</a></td></tr>";}?>
+						echo"<a href='courses/destroy/".$record['id']."'/>Delete</a></td></tr>";}?>
 				</table>
 			</div>
 
