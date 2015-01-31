@@ -23,6 +23,12 @@ class Courses extends CI_Controller {
 			echo "issue";
 			}
 		}
+
+		public function delete($course_id){
+			$this->output->enable_profiler(TRUE);
+			$this->load->model("Course");//load model
+			$this->Course->delete_course($course_id);
+		}
 			
 		}
 ?>

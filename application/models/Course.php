@@ -16,9 +16,10 @@ class Course extends CI_Model {
 	}
 
 
-	public function delete_course(){
-
-
+	public function delete_course($id) {
+		$query = "DELETE FROM courses WHERE id=?";
+		$values=$id;
+		return $this->db->query($query,$values);
 
 	}
 
