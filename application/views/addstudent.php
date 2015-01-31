@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="four columns offset-by-four columns">
-				<h4>Add a class</h4>
+				<h4>Add a course</h4>
 				<form action="courses/add" method="post">
 				Name:<input type="text" name="title">
 				Description:<input type="text" name="description">
@@ -23,6 +23,7 @@
 
 		<div class="row"> 
 			<div class="ten columns offset-by-one column">
+				<h5>Courses:</h5>
 				<table>
 					<thead>
 						<th>ID</th>
@@ -36,10 +37,10 @@
 							// var_dump($record); 
 							echo "<tr>";
 								foreach($record as $item =>$data) {
-									echo "<td>".$data." ";
+									echo "<td>".$data."</td> ";
 						} 
 
-						echo"<a href='courses/destroy/".$record['id']."'/>Delete</a></td></tr>";}?>
+						echo"<td><a href='courses/destroy/".$record['id']."'/>Delete</a></td></tr>";}?>
 				</table>
 			</div>
 

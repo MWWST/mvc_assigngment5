@@ -11,7 +11,7 @@ class Course extends CI_Model {
 
 	public function display_course(){
 
-		return $this->db->query("SELECT * FROM courses") ->result_array();
+		return $this->db->query("SELECT id,title, description, DATE_FORMAT(created_at,'%b %d %Y %h:%i %p') FROM courses") ->result_array();
 
 	}
 

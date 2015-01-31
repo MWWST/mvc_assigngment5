@@ -34,7 +34,7 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-  border: 1px solid;
+  /*border: 1px solid;*/
   box-sizing: border-box; }
 .column,
 .columns {
